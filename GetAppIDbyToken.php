@@ -1,7 +1,7 @@
 <?php
 function get_app_id($token)
 {
-	$linklist = 'https://graph.facebook.com/app?access_token='.$token;
+	$linklist = 'https://graph.facebook.com/app?fields=id&access_token='.$token;
 	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $linklist);
